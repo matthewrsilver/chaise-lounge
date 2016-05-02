@@ -1,0 +1,25 @@
+{
+    "manifest_version" : 2,
+
+    "name" : "Chaise Lounge",
+    "description" : "Defaults to 100 documents per page in futon. Relax even more!",
+    "version" : "0.5",
+
+    "browser_action" : {
+        "default_icon" : "icon.png",
+        "default_popup" : "popup.html",
+        "default_title": "Relax even more!!"
+    },
+
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["changesel.js"],
+            "run_at" : "document_idle"
+        }
+    ],
+
+    "permissions": [
+    ]
+
+}
